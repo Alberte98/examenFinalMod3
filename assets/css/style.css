@@ -1,11 +1,10 @@
-/*@font-face {
-  font-family: "Comfortaa";
-  src: url(/assets/fonts/Comfortaa/static/Comfortaa-Regular.ttf) format("truetype");
-}*/
-
+@font-face {
+  font-family: "Monster";
+  src: url("/assets/fonts/Monsterrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
 
 main {
-  font-family: "Comfortaa";
+  font-family: "Monster";
   width: 210mm;
   padding: 20px 60px;
   border: 1px solid #D2D2D2; 
@@ -34,3 +33,30 @@ img {
   border-radius: 0%;
 }
 
+
+pre {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: small;
+}
+
+h2{
+  font-size: xx-large;
+}
+
+h3{
+  font-size: x-large;
+}
+
+h4{
+ font-size: large;
+}
+
+h5 {
+  font-size: medium;
+  margin: 10px 0 10px 0;
+}
+
+p {
+  font-size: medium;
+  margin: 10px 0 10px 0;
+}
