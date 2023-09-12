@@ -17,52 +17,60 @@
         sea la auditoría y control del
         del CMS. <br>
         Realiza las capturas de pantalla tanto del area de usuarios como de la
-        base datos en las que se
-        evidencie este nuevo usuario (3 ptos)</h4>
+        base datos en las que se evidencie este nuevo usuario (3 ptos)</h4>
+
       <h4>2) Diseña un plan de auditoría para el CMS (7 ptos)</h4>
       <hr>
 
       <h2>Ejercicio 1). Solución:</h2>
       <h4>Guía con capturas:</h4>
-      <p>Un usuario auditor debe tener acceso a todas las funciones del
-        wordpress, por ello se le otorgaran permisos de
-        administrador.
+      <h5>Instalar un plugin de control de acceso:</h5>
+      <p> En el panel de administración de WordPress, ve a "Plugins" y luego haz
+        clic en "Añadir nuevo". Busca un plugin de control de acceso, como
+        "Members" o "User Role Editor", e instálalo y actívalo.</p>
+      <p>En este caso se ha elegido el plugin Members</p>
+      <img src="assets/img/01-plugin_usuarios.png"
+        alt="buscar e instalar plugin">
+      <img src="assets/img/02-activar-plugin.png" alt="activar plugin">
+
+      <h5>Crear un nuevo rol de usuario:</h5>
+      <p> Una vez que hayas instalado el plugin, deberías encontrar una nueva
+        opción en el menú de WordPress, como "Roles" o "User Roles". Desde aquí,
+        puedes crear un nuevo rol de usuario personalizado y asignarle los
+        permisos que desees para las auditorías.</p>
+
+      <img src="assets/img/03-crear-nuevo-perfil.png" alt="crear perfil">
+      <img src="assets/img/04-dar-permisos.png" alt="permisos del perfil">
+
+      <h5>Asignar usuarios al nuevo rol:</h5>
+      <p>Luego, puedes asignar usuarios existentes a este nuevo rol o crear
+        nuevos usuarios y asignarles ese rol.</p>
+      <p>Para ello vamos al menu de administración de wordpress, a la sección
+        de usuarios > crear nuevo.</p>
+
+      <img src="assets/img/05-crear-usuario.png" alt="Acceder panel usuarios">
+      <img src="assets/img/06-crear-usuario-2.png" alt="Crear usuario">
+      <br><br><br>
+      <h5>Verificar la creación:</h5>
+      <p>Lo último será verificar la creación del usuario tanto mediante
+        el panel de control de worpress como por phpmyadmin.
       </p>
-      <p>Lo primero es, en el menú de administracion de wordpress, entrar en la
-        seccion de usuarios:</p>
-      <img src="assets/img/01_Crear-usuario-wp.png" alt="entrar a usuarios">
 
-      <p>A continuación, en el panel de creación, crearemos un usuario "auditor,
-        con su nombre apellidos y correo</p>
-      <p>Entre paréntesis aparecen los campos obligatorios.</p>
-      <p>Es recomendable utilizar una contraseña segura, aqui se utiliza una de
-        ejemplo que no es recomendable.</p>
-      <img src="assets/img/02_Hacer-usuario-wp.png"
-        alt="formulario creación usuario">
+      <img class="img-1" src="assets/img/07-comprobar-usuario.png" alt="verificar usuario wp">
+      <img class="img-2" src="assets/img/08-verifiaccion-php.png" alt="verificar usuario php">
 
-      <p>En la siguientes capturas se muestra la confirmación de los usuarios,
-        tanto en wordpress como en phpmyadmin</p>
-      <h5>Captura Wordpress:</h5>
-      <img src="assets/img/04_usuario_en_wp.png" alt="usuario en wordpress">
-
-      <h5>Captura phpmyadmin:</h5>
-      <img class="img-1" src="assets/img/03_Usuario-en-phpmyadmin.png"
-        alt="usuario en wordpress">
-
-      <p>Para realizar la auditoria tendrá que loguearse este usuario:</p>
-      <img class="img-2" src="assets/img/05_logueo_como_auditor.png" alt>
 
       <h2>Ejercicio 2). Solución:</h2>
 
       <h3>Plan de Auditoría para el Sistema WordPress</h3>
-      
+
       <h4>Sistema WordPress y Configuración:</h4>
 
-        <li><strong>Versión de WordPress:</strong> 6.3.1 </li>
-        <li><strong>Versión de PHP:</strong> 8.1 </li>
-        <li><strong>Base de datos:</strong> MariaDB 15.1 </li>
-        <li><strong>Servidor Web:</strong> Apache2 </li>
-        <li><strong>Sistema Operativo:</strong> Ubuntu 22.04 </li>
+      <li><strong>Versión de WordPress:</strong> 6.3.1 </li>
+      <li><strong>Versión de PHP:</strong> 8.1 </li>
+      <li><strong>Base de datos:</strong> MariaDB 15.1 </li>
+      <li><strong>Servidor Web:</strong> Apache2 </li>
+      <li><strong>Sistema Operativo:</strong> Ubuntu 22.04 </li>
 
       <h4>1. Auditoría de Controles de Aplicación:</h4>
 
@@ -77,14 +85,16 @@
 
       <p>
         Evaluar el modelo de estudio de riesgos existente para identificar
-        vulnerabilidades potenciales y amenazas en el sistema WordPress. Realizar
+        vulnerabilidades potenciales y amenazas en el sistema WordPress.
+        Realizar
         pruebas de penetración si es necesario.
       </p>
       <h5>c) Observación y Prueba de Procedimientos del Usuario:</h5>
 
       <p>
         Observar y documentar los procedimientos de uso comunes por parte de los
-        usuarios finales para asegurarse de que se sigan las mejores prácticas de
+        usuarios finales para asegurarse de que se sigan las mejores prácticas
+        de
         seguridad.
       </p>
       <h5>d) Prueba de Integridad de los Datos:</h5>
@@ -96,24 +106,30 @@
       <h5>e) Sistemas de Aplicación de Pruebas:</h5>
 
       <p>
-        Utilizar herramientas de escaneo de seguridad y pruebas de vulnerabilidad
-        para evaluar la seguridad de WordPress, los plugins y los temas. Realizar
+        Utilizar herramientas de escaneo de seguridad y pruebas de
+        vulnerabilidad
+        para evaluar la seguridad de WordPress, los plugins y los temas.
+        Realizar
         pruebas de seguridad de aplicaciones web.
       </p>
-      
-      <h4>2. Auditoría de Desarrollo, Adquisición y Mantenimiento de los Sistemas:</h4>
+
+      <br><br><br>
+      <h4>2. Auditoría de Desarrollo, Adquisición y Mantenimiento de los
+        Sistemas:</h4>
 
       <h5>a) Gestión de Proyectos:</h5>
 
       <p>
-        Revisar la documentación de gestión de proyectos para asegurarse de que se
+        Revisar la documentación de gestión de proyectos para asegurarse de que
+        se
         hayan seguido las mejores prácticas durante el desarrollo y la
         implementación del sistema.
       </p>
       <h5>b) Estudio de Factibilidad:</h5>
 
       <p>
-        Evaluar la documentación del estudio de factibilidad para determinar si se
+        Evaluar la documentación del estudio de factibilidad para determinar si
+        se
         identificaron riesgos y costos adecuadamente antes de la implementación.
       </p>
       <h5>c) Definición de Requerimientos:</h5>
@@ -125,26 +141,31 @@
       <h5>d) Procesos de Adquisición de Software:</h5>
 
       <p>
-        Revisar los procesos de adquisición de software, incluida la verificación
+        Revisar los procesos de adquisición de software, incluida la
+        verificación
         de licencias y acuerdos de uso.
       </p>
       <h5>e) Diseño y Desarrollo de Pruebas:</h5>
 
       <p>
-        Evaluar la documentación de diseño y desarrollo de pruebas para verificar
+        Evaluar la documentación de diseño y desarrollo de pruebas para
+        verificar
         que se hayan realizado pruebas adecuadas de seguridad y funcionalidad.
       </p>
       <h5>f) Etapa de Implementación:</h5>
 
       <p>
         Revisar el proceso de implementación, incluidos los procedimientos de
-        instalación y configuración, para garantizar la seguridad y la integridad
+        instalación y configuración, para garantizar la seguridad y la
+        integridad
         del sistema.
       </p>
+      <br><br>
       <h4>3. Revisión de la Implementación:</h4>
 
       <p>
-        Realizar una revisión detallada de la implementación actual de WordPress,
+        Realizar una revisión detallada de la implementación actual de
+        WordPress,
         verificando la configuración de seguridad, los permisos de archivo y los
         ajustes del servidor web.
       </p>
@@ -159,7 +180,8 @@
       <h5>b) Sistema Operativo:</h5>
 
       <p>
-        Realizar una revisión de seguridad del sistema operativo Ubuntu 22.04 para
+        Realizar una revisión de seguridad del sistema operativo Ubuntu 22.04
+        para
         garantizar que esté actualizado y bien configurado.
       </p>
       <h5>c) Base de Datos:</h5>
@@ -202,7 +224,8 @@
       <h5>i) Cronogramas:</h5>
 
       <p>
-        Evaluar los cronogramas de mantenimiento y actualizaciones para garantizar
+        Evaluar los cronogramas de mantenimiento y actualizaciones para
+        garantizar
         que se sigan las mejores prácticas de seguridad.
       </p>
     </main>
